@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 import nude
-from nude import Nude
 
 app = Flask(__name__)
 
@@ -11,8 +10,7 @@ def healthcheck():
 
 @app.route("/")
 def isItNude():
-    # data = {'isNude': nude.is_nude("./pic.jpg")}
-    # data = {'isNude': nude.is_nude("./pic2.jpg")}
+    data = {'isNude': nude.is_nude("./pic.jpg")}
     return jsonify(data)
 
 # start the development server using the run() method
