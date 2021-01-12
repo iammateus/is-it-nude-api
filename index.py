@@ -1,16 +1,24 @@
 from flask import Flask, jsonify, request
 import nude
+from werkzeug.utils import secure_filename
+import os
 
+UPLOAD_FOLDER = '/var/www/html/resources'
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/healthcheck")
 def healthcheck():
-    data = {'message': 'The server is running! (Todo-api of the snake)'}
+    data = {'message': 'The server is running! (Is it Nude API)'}
     return jsonify(data)
 
-@app.route("/")
+@app.route("/", methods = ['POST'])
 def isItNude():
-    data = {'isNude': nude.is_nude("./pic.jpg")}
+    imageFile = request.files['image']
+    filename = secure_filename(imageFile.filename)
+    filePath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    imageFile.save(filePath)
+    data = {'isItNude': nude.is_nude(filePath)}
     return jsonify(data)
 
 # start the development server using the run() method
