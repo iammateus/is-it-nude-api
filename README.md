@@ -1,5 +1,13 @@
 # Is it Nude API
 
-An API that checks whether the image has nudes or not.
+A Python API that checks whether an image has nudity content or not.
 
-It's limited so sometimes errors do occur.
+It's a limited solution so sometimes mistakes do occur.
+
+## Requeriments
+
+1. This project runs on [Docker](https://docs.docker.com/).
+
+## Installation
+
+    $ docker-compose up
