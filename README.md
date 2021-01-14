@@ -1,4 +1,4 @@
-# Is it Nude API
+# Is it Nude? API
 
 A Python API that checks whether an image has nudity content or not.
 
