@@ -11,3 +11,7 @@ It's a limited solution so sometimes mistakes do occur.
 ## Installation
 
     $ docker-compose up
+
+## License
+
+[MIT](https://github.com/iammateus/is-it-nude-api/blob/master/LICENSE)
