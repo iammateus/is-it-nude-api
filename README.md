@@ -2,7 +2,7 @@
 
 A Python API that checks whether an image has nudity content or not.
 
-It's a limited solution so sometimes mistakes do occur.
+It's a limited solution therefore mistakes do occur sometimes.
 
 ## Requeriments
 
